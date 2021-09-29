@@ -1,0 +1,89 @@
+<%- include("partials/header.ejs"); -%>
+
+
+<div class="block">
+    <div class="heading">
+        <div>
+            <div class="blogName">Today's best blog</div>
+            <div class="date">September 26, 2021</div>
+        </div>
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="photo">
+        <img
+        src="https://thumbs.dreamstime.com/b/beautiful-autumn-scenery-park-beautiful-autumn-scenery-park-outdoor-photography-sunrise-light-101482086.jpg" />           
+    </div>
+    <div class="message">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde perferendis quam, nemo corporis, neque, ut enim ab architecto similique dignissimos quasi nam ex! Consectetur quos animi ipsa laudantium hic repellendus!
+    </div>
+    <div class="bottom">
+        <div class="comment">
+            Post a comment
+            <i class="fas fa-comment-alt"></i>
+        </div>
+        <div class="read">
+            Read more...
+        </div>
+
+    </div>
+</div>
+
+
+<div class="block">
+    <div class="heading">
+        <div>
+            <div class="blogName">Today's best blog</div>
+            <div class="date">September 26, 2021</div>
+        </div>
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="photo">
+        <img
+        src="https://thumbs.dreamstime.com/b/beautiful-autumn-scenery-park-beautiful-autumn-scenery-park-outdoor-photography-sunrise-light-101482086.jpg" />           
+    </div>
+    <div class="message">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde perferendis quam, nemo corporis, neque, ut enim ab architecto similique dignissimos quasi nam ex! Consectetur quos animi ipsa laudantium hic repellendus!
+    </div>
+    <div class="bottom">
+        <div class="comment">
+            Post a comment
+            <i class="fas fa-comment-alt"></i>
+        </div>
+        <div class="read">
+            Read more...
+        </div>
+
+    </div>
+</div>
+
+<% for(var i = 0; i < blogs.length; i++){ %>
+<div class="block">
+    <div class="heading">
+        <div>
+            <div class="blogName"><%= blogs[i].title %></div>
+            <div class="date"><%= blogs[i].time %></div>
+        </div>
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="photo">
+        <img
+        src="https://thumbs.dreamstime.com/b/beautiful-autumn-scenery-park-beautiful-autumn-scenery-park-outdoor-photography-sunrise-light-101482086.jpg" />           
+    </div>
+    <div class="message">
+        <%= blogs[i].content %>
+    </div>
+    <div class="bottom">
+        <div class="comment">
+            Post a comment
+            <i class="fas fa-comment-alt"></i>
+        </div>
+        <div class="read">
+            Read more...
+        </div>
+
+    </div>
+</div>
+<% } %>
+
+
+<%- include("partials/footer.ejs"); -%>
